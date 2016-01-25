@@ -69,11 +69,13 @@ Combine multiple streams into single stream.
 <tr><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
 </table>
 
-### Unsorted
+### Side effects 
+
+Produce side effect for every value.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>?</code></td><td><code>amb / race</code></td></tr>
+<tr><td><code>tap</code></td><td><code>do / tap</code></td></tr>
 </table>
 
 ### Found docs / API quirks
