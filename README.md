@@ -6,7 +6,7 @@
 
 ### Create
 
-Create streams from non-stream values.
+Create stream from non-stream values.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
