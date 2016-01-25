@@ -4,6 +4,16 @@
 
 ## Operators
 
+### Create
+
+Create streams from non-stream values.
+
+<table>
+<tr><th>MostJS</th><th>RxJS</th></tr>
+<tr><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
+<tr><td>...</td><td>...</td></tr>
+</table>
+
 ### Map
 
 Map values of a stream to a different stream (1 to 1).
@@ -66,7 +76,6 @@ Combine multiple streams into single stream.
 <tr><td><code>zip</code></td><td><code>zip</code></td></tr>
 <tr><td><code>concat</code></td><td><code>concat</code></td></tr>
 <tr><td><code>ap</code></td><td><code>combineLatest</code></td></tr>
-<tr><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
 </table>
 
 ### Side effects 
