@@ -76,7 +76,7 @@ Combine multiple streams into single stream.
 <tr><td><code>?</code></td><td><code>amb / race</code></td></tr>
 </table>
 
-### Found API defects
+### Found docs / API quirks
 
 #### MostJS 
 
