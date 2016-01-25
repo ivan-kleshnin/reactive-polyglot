@@ -23,7 +23,7 @@ Transform stream values in general way (* to *).
 <tr><th>MostJS</th><th>RxJS</th></tr>
 <tr><td><code>chain / flatMap</code></td><td><code>flatMap</code></td></tr>
 <tr><td><code>concatMap</code></td><td><code>concatMap</code></td></tr>
-<tr><td><code>flatMap + R.id</code></td><td><code>mergeAll</code></td></tr>
+<tr><td><code>join</code></td><td><code>mergeAll</code></td></tr>
 </table>
 
 ### Filter by predicate
