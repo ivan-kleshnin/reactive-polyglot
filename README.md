@@ -4,14 +4,19 @@
 
 ## Operators
 
+Current ordering is subjective: from most common operators to less common.
+
 ### Create
 
 Create stream from non-stream values.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
+<tr><td><code>of / just</code></td><td><code>of / just</code></td></tr>
+<tr><td><code>from</code></td><td><code>from</code></td></tr>
+<tr><td><code>fromPromise</code></td><td><code>fromPromise</code></td></tr>
+<tr><td><code>periodic</code></td><td><code>interval + map</code></td></tr>
 <tr><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
-<tr><td>...</td><td>...</td></tr>
 </table>
 
 ### Map
@@ -81,6 +86,15 @@ Produce side effect for every event.
 <tr><td><code>tap</code></td><td><code>do / tap</code></td></tr>
 </table>
 
+### Ending
+
+Operators for special end handling.
+
+<table>
+<tr><th>MostJS</th><th>RxJS</th></tr>
+<tr><td><code>never</code></td><td><code>–/code></td></tr>
+</table>
+
 ### Found docs / API quirks
 
 #### MostJS 
@@ -105,3 +119,7 @@ Produce side effect for every event.
 `takeUntil` is not listed in "Filtering" section.
 
 `just` / `return` should be deprecated in favor of `of`
+
+### Tools
+
+[stream-conversions](https://github.com/TylorS/stream-conversions) – convert between different stream implementations
