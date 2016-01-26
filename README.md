@@ -16,29 +16,31 @@ Create stream from non-stream values.
 
 ### Map
 
-Map values of a stream to a different stream (1 to 1).
+Modify events one to one.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
 <tr><td><code>map</code></td><td><code>map</code></td></tr>
 <tr><td><code>constant</code></td><td><code>mapTo</code></td></tr>
+<tr><td><code>delay</code></td><td><code>delay</code></td></tr>
 <tr><td><code>timestamp</code></td><td><code>timestamp</code></td></tr>
 </table>
 
 ### Transform
 
-Transform stream values in general way (* to *).
+Modify events * to *.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
+<tr><td><code>scan</code></td><td><code>scan</code></td></tr>
 <tr><td><code>chain / flatMap</code></td><td><code>flatMap</code></td></tr>
 <tr><td><code>concatMap</code></td><td><code>concatMap</code></td></tr>
 <tr><td><code>join</code></td><td><code>mergeAll</code></td></tr>
 </table>
 
-### Filter by predicate
+### Filter
 
-Skip stream values by predicate.
+Skip events by predicate or signal.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
@@ -52,20 +54,12 @@ Skip stream values by predicate.
 <tr><td><code>until / takeUntil</code></td><td><code>takeUntil</code></td></tr>
 <tr><td><code>skipWhile</code></td><td><code>skipWhile</code></td></tr>
 <tr><td><code>since / skipUntil</code></td><td><code>skipUntil</code></td></tr>
-</table>
-
-### Filter by signal
-
-Skip stream values by time / signal.
-
-<table>
-<tr><th>MostJS</th><th>RxJS</th></tr>
 <tr><td><code>during</code></td><td><code>window + take(1)</code></td></tr>
 </table>
 
 ### Combine 
 
-Combine multiple streams into single stream.
+Combine multiple streams into single.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
@@ -80,7 +74,7 @@ Combine multiple streams into single stream.
 
 ### Side effects 
 
-Produce side effect for every value.
+Produce side effect for every event.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
