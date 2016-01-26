@@ -92,7 +92,14 @@ Operators for special end handling.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>never</code></td><td><code>–/code></td></tr>
+<tr><td><code>never</code></td><td><code>–</code></td></tr>
+</table>
+
+### Concurrency
+
+<table>
+<tr><th>MostJS</th><th>RxJS</th></tr>
+<tr><td><code>– (<a href="https://github.com/ivan-kleshnin/reactive-polyglot/wiki/race">custom</a>)</code></td><td><code>amb / race</code></td></tr>
 </table>
 
 ### Found docs / API quirks
