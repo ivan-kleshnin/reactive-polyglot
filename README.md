@@ -4,7 +4,9 @@
 
 ## Operators
 
-Current ordering is subjective: from most common operators to less common.
+Current ordering is subjective: from most common operators to less common.<br/>
+Operator counterparts are not expected to be fully equivalent.<br/>
+"Kinda the same" is the current definition.
 
 ### Create
 
@@ -17,6 +19,7 @@ Create stream from non-stream values.
 <tr><td><code>fromPromise</code></td><td><code>fromPromise</code></td></tr>
 <tr><td><code>periodic</code></td><td><code>interval + map</code></td></tr>
 <tr><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
+<tr><td><code>iterate</code></td><td><code>generate</code></td></tr>
 </table>
 
 ### Map
