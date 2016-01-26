@@ -20,6 +20,7 @@ Create stream from non-stream values.
 <tr><td><code>periodic</code></td><td><code>interval + map</code></td></tr>
 <tr><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
 <tr><td><code>iterate</code></td><td><code>generate</code></td></tr>
+<tr><td><code>generate</code></td><td><code>generate</code></td></tr>
 </table>
 
 ### Map
