@@ -46,6 +46,7 @@ Modify events * to *.
 <tr><td><code>chain / flatMap</code></td><td><code>flatMap</code></td></tr>
 <tr><td><code>concatMap</code></td><td><code>concatMap</code></td></tr>
 <tr><td><code>join</code></td><td><code>mergeAll</code></td></tr>
+<tr><td><code>loop</code></td><td><code>scan + map</code></td></tr>
 </table>
 
 ### Filter
