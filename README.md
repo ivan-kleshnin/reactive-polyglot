@@ -133,6 +133,8 @@ Operators for special end handling.
 
 `just` / `return` should be deprecated in favor of `of`
 
+`fromArray` should be deprecated in favor of `from`
+
 ### Tools
 
 [stream-conversions](https://github.com/TylorS/stream-conversions) – convert between different stream implementations
