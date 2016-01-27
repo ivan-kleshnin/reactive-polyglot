@@ -14,7 +14,8 @@ Create stream from non-stream values.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>of / just</code></td><td><code>of / just</code></td></tr>
+<tr><td><code>of / just</code></td><td><code>just</code></td></tr>
+<tr><td><code>– (from)</code></td><td><code>of</code></td></tr>
 <tr><td><code>from</code></td><td><code>from</code></td></tr>
 <tr><td><code>fromEvent</code></td><td><code>fromEvent</code></td></tr>
 <tr><td><code>fromPromise</code></td><td><code>fromPromise</code></td></tr>
