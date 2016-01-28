@@ -1,3 +1,5 @@
+### Buffer every N events and emit as single event
+
 ```js
 import Most from "most";
 import {add, append, curry, takeLast} from "ramda";
