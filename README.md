@@ -48,6 +48,7 @@ Modify events * to *.
 <tr><td><code>concatMap</code></td><td><code>concatMap</code></td></tr>
 <tr><td><code>join</code></td><td><code>mergeAll</code></td></tr>
 <tr><td><code>loop</code></td><td><code>scan + map</code></td></tr>
+<tr><td><code>– (<a href="bufferWithCount.md">custom</a>)</code></td><td><code>bufferWithCount</code></td></tr>
 </table>
 
 ### Filter
