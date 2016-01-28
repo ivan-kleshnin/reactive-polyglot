@@ -2,7 +2,7 @@
 
 ```js
 import Most from "most";
-import {append, curry, repeat} from "ramda";
+import {add, append, curry, repeat} from "ramda";
 
 // Number -> Stream a -> Stream [a]
 let history = curry((n, s$) => {
