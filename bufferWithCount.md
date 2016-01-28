@@ -17,12 +17,6 @@ let s$ = Most
   .periodic(100, 1)
   .scan(add, 0); // 0--1--2--...
 
-buffer(3, s$)
-  .observe(console.log);
-```  
-  
-```  
-[0, 1, 2]
-[3, 4, 5]
-...
+buffer(3, s$) // [0, 1, 2]--[3, 4, 5]--...
+  .observe(console.log); 
 ```
