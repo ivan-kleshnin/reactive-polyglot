@@ -1,6 +1,6 @@
 ```js
 import Most from "most";
-import {append, curry, drop, head, repeat, takeLast} from "ramda";
+import {append, curry, repeat} from "ramda";
 
 // Number -> Stream a -> Stream [a]
 let history = curry((n, s$) => {
@@ -18,9 +18,9 @@ let most = Most
 history(3, most) // [0]--[0, 1]--[0, 1, 2]--[1, 2, 3]--[2, 3, 4]--...
   .map(x => {
     return {
-      olderState: head(takeLast(1, drop(2, x))),
-      prevState: head(takeLast(1, drop(1, x))),
-      currState: head(takeLast(1, x)),
+      olderState: x.slice(-3, x.length - 2, x)[0], // u--u--0--...
+      prevState: x.slice(-2, x.length - 1, x)[0],  // u--0--1--...
+      currState: x.slice(-1, x.length, x)[0],      // 0--1--2--...
     };
   })
   .observe(console.log);
