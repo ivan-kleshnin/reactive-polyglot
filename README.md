@@ -120,7 +120,7 @@ Operators which target end event somehow.
 
 ### Notable differences
 
-RxJS does not emit initial `scan` value as event.
+RxJS does not emit initial `scan` value as event (see `startWith`).
 MostJS emits initial `scan` value as event.
 
 ```js
