@@ -96,11 +96,12 @@ Produce side effect for every event.
 
 ### Ending
 
-Operators for special end handling.
+Operators which target end event somehow.
 
 <table>
 <tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>never</code></td><td><code>–</code></td></tr>
+<tr><td><code>never</code></td><td><code>never</code></td></tr>
+<tr><td><code>continueWith</code></td><td><code>?</code></td></tr>
 </table>
 
 ### Concurrency
