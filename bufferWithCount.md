@@ -2,10 +2,6 @@
 import Most from "most";
 import {add, append, curry, takeLast} from "ramda";
 
-let add = (x, y) => x + y;
-let append = (x, xs) => xs.concat([x]);
-let takeLast = (n, xs) => xs.slice(-n, Infinity);
-
 // Number -> Stream a -> Stream [a]
 let buffer = curry((n, s$) => {
   return s$
