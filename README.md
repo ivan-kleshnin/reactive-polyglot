@@ -109,6 +109,13 @@ Operators for special end handling.
 <tr><td><code>– (<a href="https://github.com/ivan-kleshnin/reactive-polyglot/wiki/race">custom</a>)</code></td><td><code>amb / race</code></td></tr>
 </table>
 
+### History
+
+<table>
+<tr><th>MostJS</th><th>RxJS</th></tr>
+<tr><td colspan="2"><code>– (<a href="history.md">custom</a>)</code></td></tr>
+</table>
+
 ### Notable differences
 
 RxJS does not emit initial `scan` value as event.
