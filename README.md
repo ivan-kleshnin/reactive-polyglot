@@ -139,10 +139,6 @@ Most.periodic(100, 1)
 `startWith` vs `sampleWith` vs `continueWith` + `recoverWith` vs `skipRepeatsWith`<br/>
 (val vs none vs func vs stream)
 
-`sample` <-> `sampleWith`?
-
-`ap` is listed in "Transform" section.
-
 `tap` is listed in "Transform" section.
 
 #### RxJS
@@ -155,9 +151,9 @@ Most.periodic(100, 1)
 
 `takeUntil` is not listed in "Filtering" section.
 
-`just` / `return` should be deprecated in favor of `of`
+`just` / `return` should be deprecated in favor of `of`.
 
-`fromArray` should be deprecated in favor of `from`
+`fromArray` should be deprecated in favor of `from`.
 
 ### Tools
 
