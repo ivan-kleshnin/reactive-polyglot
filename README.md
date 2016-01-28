@@ -109,6 +109,21 @@ Operators for special end handling.
 <tr><td><code>– (<a href="https://github.com/ivan-kleshnin/reactive-polyglot/wiki/race">custom</a>)</code></td><td><code>amb / race</code></td></tr>
 </table>
 
+### Notable differences
+
+RxJS does not emit initial `scan` value as event.
+MostJS emits initial `scan` value as event.
+
+```js
+Rx.Observable.interval(100).map(x => 1)
+  .scan(add, 0);
+  .subscribe(console.log); // 1--2--3--...
+
+Most.periodic(100, 1)
+  .scan(add, 0);
+  .observe(console.log); // 0--1--2--3--...
+```
+
 ### Found docs / API quirks
 
 #### MostJS 
