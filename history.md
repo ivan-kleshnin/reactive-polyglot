@@ -1,3 +1,5 @@
+### Track history for N events
+
 ```js
 import Most from "most";
 import {append, curry, repeat} from "ramda";
