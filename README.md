@@ -30,11 +30,11 @@ Create stream from non-stream values.
 Modify events one to one.
 
 <table>
-<tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>map</code></td><td><code>map</code></td></tr>
-<tr><td><code>constant</code></td><td><code>mapTo</code></td></tr>
-<tr><td><code>delay</code></td><td><code>delay</code></td></tr>
-<tr><td><code>timestamp</code></td><td><code>timestamp</code></td></tr>
+<tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th></tr>
+<tr><td><code>map</code></td><td><code>map</code></td><td><code>map</code></td></tr>
+<tr><td><code>– (map)</code></td><td><code>constant</code></td><td><code>mapTo</code></td></tr>
+<tr><td><code>delay</code></td><td><code>delay</code></td><td><code>delay</code></td></tr>
+<tr><td><code>– (map)</code></td><td><code>timestamp</code></td><td><code>timestamp</code></td></tr>
 </table>
 
 ### Transform
