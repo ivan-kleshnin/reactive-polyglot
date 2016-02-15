@@ -13,16 +13,16 @@ Operator counterparts are not expected to be fully equivalent.<br/>
 Create stream from non-stream values.
 
 <table>
-<tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>of / just</code></td><td><code>just</code></td></tr>
-<tr><td><code>– (from)</code></td><td><code>of</code></td></tr>
-<tr><td><code>from</code></td><td><code>from</code></td></tr>
-<tr><td><code>fromEvent</code></td><td><code>fromEvent</code></td></tr>
-<tr><td><code>fromPromise</code></td><td><code>fromPromise</code></td></tr>
-<tr><td><code>periodic</code></td><td><code>interval + map</code></td></tr>
-<tr><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
-<tr><td><code>iterate</code></td><td><code>generate</code></td></tr>
-<tr><td><code>generate</code></td><td><code>generate</code></td></tr>
+<tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th></tr>
+<tr><td><code>constant</code></td><td><code>of / just</code></td><td><code>just</code></td></tr>
+<tr><td><code>– (sequentially)</code></td><td><code>– (from)</code></td><td><code>of</code></td></tr>
+<tr><td><code>– (sequentially)</code></td><td><code>from</code></td><td><code>from</code></td></tr>
+<tr><td><code>fromEvents</code></td><td><code>fromEvent</code></td><td><code>fromEvent</code></td></tr>
+<tr><td><code>fromPromise</code></td><td><code>fromPromise</code></td><td><code>fromPromise</code></td></tr>
+<tr><td><code>interval</code></td><td><code>periodic</code></td><td><code>interval + map</code></td></tr>
+<tr><td><code>repeat</code></td><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
+<tr><td><code>repeat</code></td><td><code>iterate</code></td><td><code>generate</code></td></tr>
+<tr><td><code>repeat</code></td><td><code>generate</code></td><td><code>generate</code></td></tr>
 </table>
 
 ### Map
