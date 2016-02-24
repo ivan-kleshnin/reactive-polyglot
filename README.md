@@ -123,6 +123,26 @@ Operators which target end event somehow.
 <tr><td colspan="2"><code>– (<a href="history.md">custom</a>)</code></td></tr>
 </table>
 
+### Subjective opinion on design goals 
+
+(Draft section)
+
+#### Elm
+
+Avoid assumptions, forbid higher-order (HO) signals for time paradoxes they bring
+
+#### KefirJS
+
+Avoid sync behavior, simplicity, performance
+
+#### MostJS
+
+Fantasy-land compatibility, simplicity, performance
+
+#### RxJS 
+
+Exhaustive set of operators, cross-platform API
+
 ### Notable differences
 
 RxJS does not emit initial `scan` value as event (see `startWith`).
