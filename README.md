@@ -18,16 +18,36 @@ with different goals / philosophies in mind.
 Create stream from non-stream values.
 
 <table>
-<tr><th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>Signal.constant</code></td><td><code>constant</code></td><td><code>of / just</code></td><td><code>just</code></td></tr>
-<tr><td>?</td><td><code>– (sequentially)</code></td><td><code>– (from)</code></td><td><code>of</code></td></tr>
-<tr><td>?</td><td><code>– (sequentially)</code></td><td><code>from</code></td><td><code>from</code></td></tr>
-<tr><td>?</td><td><code>fromEvents</code></td><td><code>fromEvent</code></td><td><code>fromEvent</code></td></tr>
-<tr><td>?</td><td><code>fromPromise</code></td><td><code>fromPromise</code></td><td><code>fromPromise</code></td></tr>
-<tr><td><code>Time.every</code></td><td><code>interval</code></td><td><code>periodic</code></td><td><code>interval + map</code></td></tr>
-<tr><td><code>–</code></td><td><code>repeat</code></td><td><code>of + R.range</code></td><td><code>repeat</code></td></tr>
-<tr><td><code>–</code></td><td><code>repeat</code></td><td><code>iterate</code></td><td><code>generate</code></td></tr>
-<tr><td><code>–</code></td><td><code>repeat</code></td><td><code>generate</code></td><td><code>generate</code></td></tr>
+<tr>
+  <th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th>
+</tr>
+<tr>
+  <td><code>Signal.constant</code></td><td><code>constant</code></td><td><code>of / just</code></td><td><code>just</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>– (sequentially)</code></td><td><code>– (from)</code></td><td><code>of</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>– (sequentially)</code></td><td><code>from</code></td><td><code>from</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>fromEvents</code></td><td><code>fromEvent</code></td><td><code>fromEvent</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>fromPromise</code></td><td><code>fromPromise</code></td><td><code>fromPromise</code></td>
+</tr>
+<tr>
+  <td><code>Time.every</code></td><td><code>interval</code></td><td><code>periodic</code></td><td><code>interval + map</code></td>
+</tr>
+<tr>
+  <td><code>–</code></td><td><code>repeat</code></td><td><code>of + R.range</code></td><td><code>repeat</code></td>
+</tr>
+<tr>
+  <td><code>–</code></td><td><code>repeat</code></td><td><code>iterate</code></td><td><code>generate</code></td>
+</tr>
+<tr>
+  <td><code>–</code></td><td><code>repeat</code></td><td><code>generate</code></td><td><code>generate</code></td>
+</tr>
 </table>
 
 ### Mapper
@@ -35,11 +55,21 @@ Create stream from non-stream values.
 Modify events one to one.
 
 <table>
-<tr><th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>Signal.map</code></td><td><code>map</code></td><td><code>map</code></td><td><code>map</code></td></tr>
-<tr><td><code>– (Signal.map)</code></td><td><code>– (map)</code></td><td><code>constant</code></td><td><code>mapTo</code></td></tr>
-<tr><td><code>Time.delay</code></td><td><code>delay</code></td><td><code>delay</code></td><td><code>delay</code></td></tr>
-<tr><td><code>Time.timestamp</code></td><td><code>– (map)</code></td><td><code>timestamp</code></td><td><code>timestamp</code></td></tr>
+<tr>
+  <th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th>
+</tr>
+<tr>
+  <td><code>Signal.map</code></td><td><code>map</code></td><td><code>map</code></td><td><code>map</code></td>
+</tr>
+<tr>
+  <td><code>– (Signal.map)</code></td><td><code>– (map)</code></td><td><code>constant</code></td><td><code>mapTo</code></td>
+</tr>
+<tr>
+  <td><code>Time.delay</code></td><td><code>delay</code></td><td><code>delay</code></td><td><code>delay</code></td>
+</tr>
+<tr>
+  <td><code>Time.timestamp</code></td><td><code>– (map)</code></td><td><code>timestamp</code></td><td><code>timestamp</code></td>
+</tr>
 </table>
 
 ### Transforms
@@ -47,13 +77,27 @@ Modify events one to one.
 Modify events * to *.
 
 <table>
-<tr><th>Elm</th><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>Signal.foldp</code></td><td><code>scan</code></td><td><code>scan</code></td></tr>
-<tr><td><code>– (Signal.filterMap)</code></td><td><code>chain / flatMap</code></td><td><code>flatMap</code></td></tr>
-<tr><td>?</td><td><code>concatMap</code></td><td><code>concatMap</code></td></td></tr>
-<tr><td>?</td><td><code>join</code></td><td><code>mergeAll</code></td></td></tr>
-<tr><td>?</td><td><code>loop</code></td><td><code>scan + map</code></td></td></tr>
-<tr><td>?</td><td><code>– (<a href="bufferWithCount.md">custom</a>)</code></td><td><code>bufferWithCount</code></td></td></tr>
+<tr>
+  <th>Elm</th><th>MostJS</th><th>RxJS</th>
+</tr>
+<tr>
+  <td><code>Signal.foldp</code></td><td><code>scan</code></td><td><code>scan</code></td>
+</tr>
+<tr>
+  <td><code>– (Signal.filterMap)</code></td><td><code>chain / flatMap</code></td><td><code>flatMap</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>concatMap</code></td><td><code>concatMap</code></td></td>
+</tr>
+<tr>
+  <td>?</td><td><code>join</code></td><td><code>mergeAll</code></td></td>
+</tr>
+<tr>
+  <td>?</td><td><code>loop</code></td><td><code>scan + map</code></td></td>
+</tr>
+<tr>
+  <td>?</td><td><code>– (<a href="bufferWithCount.md">custom</a>)</code></td><td><code>bufferWithCount</code></td></td>
+</tr>
 </table>
 
 ### Filters
@@ -82,12 +126,24 @@ Combine multiple streams into single.
 <table>
 <tr><th>Elm</th><th>MostJS</th><th>RxJS</th></tr>
 <tr><td><code>Signal.merge / Signal.mergeMany</code></td><td><code>merge</code></td><td><code>merge</code></td></tr>
-<tr><td><code>Signal.map2 / Signal.map3...</code> <code><~ / ~</code></td><td><code>combine</code></td><td><code>combineLatest</code></td></tr>
-<tr><td><code>Signal.sampleOn</code></td><td><code>sample</code></td><td><code>withLatestFrom</code></td></tr>
-<tr><td><code>Signal.sampleOn + Time.every</code></td><td><code>sampleWith</code></td><td><code>sample</code></td></tr>
-<tr><td>?</td><td><code>zip</code></td><td><code>zip</code></td></tr>
-<tr><td>?</td><td><code>concat</code></td><td><code>concat</code></td></tr>
-<tr><td>?</td><td><code>ap</code></td><td><code>combineLatest</code></td></tr>
+<tr>
+  <td><code>Signal.map2 / Signal.map3...</code> <code><~ / ~</code></td><td><code>combine</code></td><td><code>combineLatest</code></td>
+</tr>
+<tr>
+  <td><code>Signal.sampleOn</code></td><td><code>sample</code></td><td><code>withLatestFrom</code></td>
+</tr>
+<tr>
+  <td><code>Signal.sampleOn + Time.every</code></td><td><code>sampleWith</code></td><td><code>sample</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>zip</code></td><td><code>zip</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>concat</code></td><td><code>concat</code></td>
+</tr>
+<tr>
+  <td>?</td><td><code>ap</code></td><td><code>combineLatest</code></td>
+</tr>
 </table>
 
 ### Side effects 
@@ -95,8 +151,12 @@ Combine multiple streams into single.
 Produce side effect for every event.
 
 <table>
-<tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>tap</code></td><td><code>do / tap</code></td></tr>
+<tr>
+  <th>MostJS</th><th>RxJS</th>
+</tr>
+<tr>
+  <td><code>tap</code></td><td><code>do / tap</code></td>
+</tr>
 </table>
 
 ### Ending
@@ -104,23 +164,37 @@ Produce side effect for every event.
 Operators which target end event somehow.
 
 <table>
-<tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>never</code></td><td><code>never</code></td></tr>
-<tr><td><code>continueWith</code></td><td><code>?</code></td></tr>
+<tr>
+  <th>MostJS</th><th>RxJS</th>
+</tr>
+<tr>
+  <td><code>never</code></td><td><code>never</code></td>
+</tr>
+<tr>
+  <td><code>continueWith</code></td><td><code>?</code></td>
+</tr>
 </table>
 
 ### Concurrency
 
 <table>
-<tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>– (<a href="https://github.com/ivan-kleshnin/reactive-polyglot/wiki/race">custom</a>)</code></td><td><code>amb / race</code></td></tr>
+<tr>
+  <th>MostJS</th><th>RxJS</th>
+</tr>
+<tr>
+  <td><code>– (<a href="https://github.com/ivan-kleshnin/reactive-polyglot/wiki/race">custom</a>)</code></td><td><code>amb / race</code></td>
+</tr>
 </table>
 
 ### History
 
 <table>
-<tr><th>MostJS</th><th>RxJS</th></tr>
-<tr><td colspan="2"><code>– (<a href="history.md">custom</a>)</code></td></tr>
+<tr>
+  <th>MostJS</th><th>RxJS</th>
+</tr>
+<tr>
+  <td colspan="2"><code>– (<a href="history.md">custom</a>)</code></td>
+</tr>
 </table>
 
 ### Subjective opinion on design goals 
