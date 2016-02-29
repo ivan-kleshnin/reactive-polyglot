@@ -221,30 +221,32 @@ Operators which target end event somehow.
 </tr>
 </table>
 
-### Subjective opinion on design goals 
+### Design diffs
 
-(Draft section)
+#### RxJS
 
-#### Elm
-
-Avoid assumptions, forbid higher-order (HO) signals for time paradoxes they bring
+1. Three primitives: `Observer`, `Observable`, `Subject`. 
+2. Observables end on error.
+3. Provides API to handle errors.
+3. Does not provide API to handle ending.
 
 #### KefirJS
 
-Avoid sync behavior, simplicity, performance
+1. Two primitives: `Stream` and `Property`. Properties have "current value" notion.
+2. Observables does not end on error (by default).
+3. Provides API to handle errors.
+4. Provides API to handle ending.
 
 #### MostJS
 
-Fantasy-land compatibility, simplicity, performance
+1. One primitive: `Stream`
+2. Separate packages for [subject-like](https://github.com/TylorS/most-subject) and [property-like](https://github.com/mostjs/hold https://github.com/mostjs/hold) primitives.
+3. Provides API to handle errors.
+4. Provides API to handle ending.
 
-#### RxJS 
+#### Common
 
-Exhaustive set of operators, cross-platform API
-
-### Notable differences
-
-RxJS does not emit initial `scan` value as event (see `startWith`).
-MostJS emits initial `scan` value as event.
+RxJS does not emit initial `scan` value as event (use `startWith` for that).
 
 ```js
 Rx.Observable.interval(100).map(x => 1)
@@ -282,3 +284,7 @@ Most.periodic(100, 1)
 ### Tools
 
 [stream-conversions](https://github.com/TylorS/stream-conversions) – convert between different stream implementations
+
+### Similar projects
+
+[bacon-vs-kefir](https://github.com/rpominov/kefir/blob/master/bacon-vs-kefir-api.md)
