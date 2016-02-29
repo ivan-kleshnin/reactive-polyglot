@@ -239,7 +239,7 @@ Operators which target end event somehow.
 
 #### MostJS
 
-1. One primitive: `Stream`
+1. One primitive: `Stream`.
 2. Separate packages for [subject-like](https://github.com/TylorS/most-subject) and [property-like](https://github.com/mostjs/hold https://github.com/mostjs/hold) primitives.
 3. Provides API to handle errors.
 4. Provides API to handle ending.
@@ -294,5 +294,7 @@ Most.periodic(100, 1)
 (unsorted)
 
 https://github.com/cujojs/most/issues/171
+
 https://twitter.com/rpominov/status/689566111734599683
+
 https://github.com/zenparsing/es-observable/issues/66
