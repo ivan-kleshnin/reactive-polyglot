@@ -288,3 +288,11 @@ Most.periodic(100, 1)
 ### Similar projects
 
 [bacon-vs-kefir](https://github.com/rpominov/kefir/blob/master/bacon-vs-kefir-api.md)
+
+### Also see
+
+(unsorted)
+
+https://github.com/cujojs/most/issues/171
+https://twitter.com/rpominov/status/689566111734599683
+https://github.com/zenparsing/es-observable/issues/66
