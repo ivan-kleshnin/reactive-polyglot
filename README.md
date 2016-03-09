@@ -285,13 +285,13 @@ Most.periodic(100, 1)
 
 [stream-conversions](https://github.com/TylorS/stream-conversions) – convert between different stream implementations
 
-### Similar projects
+### Links
 
 [bacon-vs-kefir](https://github.com/rpominov/kefir/blob/master/bacon-vs-kefir-api.md)
 
-### Also see
+[dataflows](https://github.com/ivan-kleshnin/dataflows)
 
-(unsorted)
+### Additional Read
 
 https://github.com/cujojs/most/issues/171
 
