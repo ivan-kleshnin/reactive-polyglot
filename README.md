@@ -281,15 +281,13 @@ Most.periodic(100, 1)
 
 `fromArray` should be deprecated in favor of `from`.
 
-### Tools
-
-[stream-conversions](https://github.com/TylorS/stream-conversions) – convert between different stream implementations
-
 ### Links
 
-[bacon-vs-kefir](https://github.com/rpominov/kefir/blob/master/bacon-vs-kefir-api.md)
+[bacon-vs-kefir](https://github.com/rpominov/kefir/blob/master/bacon-vs-kefir-api.md) – BaconJS vs KefirJS API comparison
 
-[dataflows](https://github.com/ivan-kleshnin/dataflows)
+[dataflows](https://github.com/ivan-kleshnin/dataflows) – web arch. dataflow comparison
+
+[stream-conversions](https://github.com/TylorS/stream-conversions) – tool for cross-library stream conversions
 
 ### Additional Read
 
