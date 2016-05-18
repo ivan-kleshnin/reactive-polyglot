@@ -19,34 +19,64 @@ Create stream from non-stream values.
 
 <table>
 <tr>
-  <th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th
+  <th>Elm</th>
+  <th>KefirJS</th>
+  <th>MostJS</th>
+  <th>RxJS</th
 </tr>
 <tr>
-  <td><code>Signal.constant</code></td><td><code>constant</code></td><td><code>of / just</code></td><td><code>just</code></td>
+  <td><code>Signal.constant</code></td>
+  <td><code>constant</code></td>
+  <td><code>of / just</code></td>
+  <td><code>just</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>– (sequentially)</code></td><td><code>– (from)</code></td><td><code>of</code></td>
+  <td>?</td>
+  <td><code>– (sequentially)</code></td>
+  <td><code>– (from)</code></td>
+  <td><code>of</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>– (sequentially)</code></td><td><code>from</code></td><td><code>from</code></td>
+  <td>?</td>
+  <td><code>– (sequentially)</code></td>
+  <td><code>from</code></td>
+  <td><code>from</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>fromEvents</code></td><td><code>fromEvent</code></td><td><code>fromEvent</code></td>
+  <td>?</td>
+  <td><code>fromEvents</code></td>
+  <td><code>fromEvent</code></td>
+  <td><code>fromEvent</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>fromPromise</code></td><td><code>fromPromise</code></td><td><code>fromPromise</code></td>
+  <td>?</td>
+  <td><code>fromPromise</code></td>
+  <td><code>fromPromise</code></td>
+  <td><code>fromPromise</code></td>
 </tr>
 <tr>
-  <td><code>Time.every</code></td><td><code>interval</code></td><td><code>periodic</code></td><td><code>interval + map</code></td>
+  <td><code>Time.every</code></td>
+  <td><code>interval</code></td>
+  <td><code>periodic</code></td>
+  <td><code>interval + map</code></td>
 </tr>
 <tr>
-  <td><code>–</code></td><td><code>repeat</code></td><td><code>of + R.range</code></td><td><code>repeat</code></td>
+  <td><code>–</code></td>
+  <td><code>repeat</code></td>
+  <td><code>of + R.range</code></td>
+  <td><code>repeat</code></td>
 </tr>
 <tr>
-  <td><code>–</code></td><td><code>repeat</code></td><td><code>iterate</code></td><td><code>generate</code></td>
+  <td><code>–</code></td>
+  <td><code>repeat</code></td>
+  <td><code>iterate</code></td>
+  <td><code>generate</code></td>
 </tr>
 <tr>
-  <td><code>–</code></td><td><code>repeat</code></td><td><code>generate</code></td><td><code>generate</code></td>
+  <td><code>–</code></td>
+  <td><code>repeat</code></td>
+  <td><code>generate</code></td>
+  <td><code>generate</code></td>
 </tr>
 </table>
 
@@ -231,25 +261,53 @@ Skip events by predicate or signal.
 Combine multiple streams into single.
 
 <table>
-<tr><th>Elm</th><th>MostJS</th><th>RxJS</th></tr>
-<tr><td><code>Signal.merge / Signal.mergeMany</code></td><td><code>merge</code></td><td><code>merge</code></td></tr>
 <tr>
-  <td><code>Signal.map2 / Signal.map3...</code> <code><~ / ~</code></td><td><code>combine</code></td><td><code>combineLatest</code></td>
+  <th>Elm</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
+  <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.sampleOn</code></td><td><code>sample</code></td><td><code>withLatestFrom</code></td>
+  <td><code>Signal.merge / Signal.mergeMany</code></td>
+  <td><code>merge</code></td>
+  <td><code>merge</code></td>
+  <td><code>merge</code></td>
 </tr>
 <tr>
-  <td><code>Signal.sampleOn + Time.every</code></td><td><code>sampleWith</code></td><td><code>sample</code></td>
+  <td><code>Signal.map2 / Signal.map3...</code></td>
+  <td><code>combine</code></td>
+  <td><code>combineLatest</code></td>
+  <td><code>combine</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>zip</code></td><td><code>zip</code></td>
+  <td><code>Signal.sampleOn</code></td>
+  <td><code>sample</code></td>
+  <td><code>withLatestFrom</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>concat</code></td><td><code>concat</code></td>
+  <td><code>Signal.sampleOn + Time.every</code></td>
+  <td><code>sampleWith</code></td>
+  <td><code>sample</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>ap</code></td><td><code>combineLatest</code></td>
+  <td>?</td>
+  <td><code>zip</code></td>
+  <td><code>zip</code></td>
+  <td>?</td>
+</tr>
+<tr>
+  <td>?</td>
+  <td><code>concat</code></td>
+  <td><code>concat</code></td>
+  <td>?</td>
+</tr>
+<tr>
+  <td>?</td>
+  <td><code>ap</code></td>
+  <td><code>combineLatest</code></td>
+  <td>?</td>
 </tr>
 </table>
 
@@ -259,26 +317,41 @@ Produce side effect for every event.
 
 <table>
 <tr>
-  <th>MostJS</th><th>RxJS</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
+  <th>XStream</th>
 </tr>
 <tr>
-  <td><code>tap</code></td><td><code>do / tap</code></td>
+  <td><code>tap</code></td>
+  <td><code>do / tap</code></td>
+  <td><code>debug</code></td>
 </tr>
 </table>
 
 ### Ending
 
-Operators which target end event somehow.
+Operators which target **end** event somehow.
 
 <table>
 <tr>
-  <th>MostJS</th><th>RxJS</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
+  <th>XStream</th>
 </tr>
 <tr>
-  <td><code>never</code></td><td><code>never</code></td>
+  <td><code>empty</code></td>
+  <td><code>empty</code></td>
+  <td><code>empty</code></td>
 </tr>
 <tr>
-  <td><code>continueWith</code></td><td><code>?</code></td>
+  <td><code>never</code></td>
+  <td><code>never</code></td>
+  <td><code>never</code></td>
+</tr>
+<tr>
+  <td><code>continueWith</code></td>
+  <td><code>?</code></td>
+  <td><code>concat</code></td>
 </tr>
 </table>
 
@@ -286,10 +359,12 @@ Operators which target end event somehow.
 
 <table>
 <tr>
-  <th>MostJS</th><th>RxJS</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
 </tr>
 <tr>
-  <td><code>– (<a href="https://github.com/ivan-kleshnin/reactive-polyglot/wiki/race">custom</a>)</code></td><td><code>amb / race</code></td>
+  <td><code>– (<a href="https://github.com/ivan-kleshnin/reactive-polyglot/wiki/race">custom</a>)</code></td>
+  <td><code>amb / race</code></td>
 </tr>
 </table>
 
@@ -297,7 +372,8 @@ Operators which target end event somehow.
 
 <table>
 <tr>
-  <th>MostJS</th><th>RxJS</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
 </tr>
 <tr>
   <td colspan="2"><code>– (<a href="history.md">custom</a>)</code></td>
