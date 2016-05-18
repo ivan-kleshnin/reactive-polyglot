@@ -208,13 +208,13 @@ Skip events by predicate or signal.
   <td><code>Signal.dropRepeats</code></td>
   <td><code>skipRepeats</code></td>
   <td><code>distinctUntilChanged</code></td>
-  <td>?</td>
+  <td><code>dropRepeats</code></td>
 </tr>
 <tr>
   <td>?</td>
   <td><code>skipRepeatsWith</code></td>
   <td><code>– (scan)</code></td>
-  <td>?</td>
+  <td><code>dropRepeats</code></td>
 </tr>
 <tr>
   <td>?</td>
