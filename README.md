@@ -72,18 +72,18 @@ Create stream from non-stream values.
   <td><code>repeat</code></td>
   <td><code>of + R.range</code></td>
   <td><code>repeat</code></td>
-  <td>?</td>
+  <td><code>of + R.range</code></td>
 </tr>
 <tr>
   <td><code>–</code></td>
-  <td><code>repeat</code></td>
+  <td><code>?</code></td>
   <td><code>iterate</code></td>
   <td><code>generate</code></td>
   <td>?</td>
 </tr>
 <tr>
   <td><code>–</code></td>
-  <td><code>repeat</code></td>
+  <td><code>?</code></td>
   <td><code>generate</code></td>
   <td><code>generate</code></td>
   <td>?</td>
