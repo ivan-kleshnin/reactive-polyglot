@@ -153,40 +153,76 @@ Skip events by predicate or signal.
 
 <table>
 <tr>
-  <th>Elm</th><th>MostJS</th><th>RxJS</th>
+  <th>Elm</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
+  <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.filter</code></td><td><code>filter</code></td><td><code>filter</code></td>
+  <td><code>Signal.filter</code></td>
+  <td><code>filter</code></td>
+  <td><code>filter</code></td>
+  <td><code>filter</code></td>
 </tr>
 <tr>
-  <td><code>Signal.dropRepeats</code></td><td><code>skipRepeats</code></td><td><code>distinctUntilChanged</code></td>
+  <td><code>Signal.dropRepeats</code></td>
+  <td><code>skipRepeats</code></td>
+  <td><code>distinctUntilChanged</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>skipRepeatsWith</code></td><td><code>– (scan)</code></td>
+  <td>?</td>
+  <td><code>skipRepeatsWith</code></td>
+  <td><code>– (scan)</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>skip</code></td><td><code>skip</code></td>
+  <td>?</td>
+  <td><code>skip</code></td>
+  <td><code>skip</code></td>
+  <td><code>drop</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>take</code></td><td><code>take</code></td>
+  <td>?</td>
+  <td><code>take</code></td>
+  <td><code>take</code></td>
+  <td><code>take</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>slice</code></td><td><code>skip + take</code></td>
+  <td>?</td>
+  <td><code>slice</code></td>
+  <td><code>skip + take</code></td>
+  <td><code>drop + take</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>skipWhile</code></td><td><code>skipWhile</code></td>
+  <td>?</td>
+  <td><code>skipWhile</code></td>
+  <td><code>skipWhile</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>takeWhile</code></td><td><code>takeWhile</code></td>
+  <td>?</td>
+  <td><code>takeWhile</code></td>
+  <td><code>takeWhile</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>since / skipUntil</code></td><td><code>skipUntil</code></td>
+  <td>?</td>
+  <td><code>since / skipUntil</code></td>
+  <td><code>skipUntil</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>until / takeUntil</code></td><td><code>takeUntil</code></td>
+  <td>?</td>
+  <td><code>until / takeUntil</code></td>
+  <td><code>takeUntil</code></td>
+  <td>?</td>
 </tr>
 <tr>
-  <td>?</td><td><code>during</code></td><td><code>window + take(1)</code></td>
+  <td>?</td>
+  <td><code>during</code></td>
+  <td><code>window + take(1)</code></td>
+  <td>?</td>
 </tr>
 </table>
 
