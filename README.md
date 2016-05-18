@@ -22,18 +22,21 @@ Create stream from non-stream values.
   <th>Elm</th>
   <th>KefirJS</th>
   <th>MostJS</th>
-  <th>RxJS</th
+  <th>RxJS</th>
+  <th>XStream</th>
 </tr>
 <tr>
   <td><code>Signal.constant</code></td>
   <td><code>constant</code></td>
   <td><code>of / just</code></td>
   <td><code>just</code></td>
+  <td><code>of</code></td>
 </tr>
 <tr>
   <td>?</td>
   <td><code>– (sequentially)</code></td>
   <td><code>– (from)</code></td>
+  <td><code>of</code></td>
   <td><code>of</code></td>
 </tr>
 <tr>
@@ -41,15 +44,18 @@ Create stream from non-stream values.
   <td><code>– (sequentially)</code></td>
   <td><code>from</code></td>
   <td><code>from</code></td>
+  <td>?</td>
 </tr>
 <tr>
   <td>?</td>
   <td><code>fromEvents</code></td>
   <td><code>fromEvent</code></td>
   <td><code>fromEvent</code></td>
+  <td><code>fromEvent</code></td>
 </tr>
 <tr>
   <td>?</td>
+  <td><code>fromPromise</code></td>
   <td><code>fromPromise</code></td>
   <td><code>fromPromise</code></td>
   <td><code>fromPromise</code></td>
@@ -59,24 +65,28 @@ Create stream from non-stream values.
   <td><code>interval</code></td>
   <td><code>periodic</code></td>
   <td><code>interval + map</code></td>
+  <td><code>periodic</code></td>
 </tr>
 <tr>
   <td><code>–</code></td>
   <td><code>repeat</code></td>
   <td><code>of + R.range</code></td>
   <td><code>repeat</code></td>
+  <td>?</td>
 </tr>
 <tr>
   <td><code>–</code></td>
   <td><code>repeat</code></td>
   <td><code>iterate</code></td>
   <td><code>generate</code></td>
+  <td>?</td>
 </tr>
 <tr>
   <td><code>–</code></td>
   <td><code>repeat</code></td>
   <td><code>generate</code></td>
   <td><code>generate</code></td>
+  <td>?</td>
 </tr>
 </table>
 
