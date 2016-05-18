@@ -19,7 +19,7 @@ Create stream from non-stream values.
 
 <table>
 <tr>
-  <th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th>
+  <th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th
 </tr>
 <tr>
   <td><code>Signal.constant</code></td><td><code>constant</code></td><td><code>of / just</code></td><td><code>just</code></td>
@@ -56,19 +56,39 @@ Modify events one to one.
 
 <table>
 <tr>
-  <th>Elm</th><th>KefirJS</th><th>MostJS</th><th>RxJS</th>
+  <th>Elm</th>
+  <th>KefirJS</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
+  <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.map</code></td><td><code>map</code></td><td><code>map</code></td><td><code>map</code></td>
+  <td><code>Signal.map</code></td>
+  <td><code>map</code></td>
+  <td><code>map</code></td>
+  <td><code>map</code></td>
+  <td><code>map</code></td>
 </tr>
 <tr>
-  <td><code>– (Signal.map)</code></td><td><code>– (map)</code></td><td><code>constant</code></td><td><code>mapTo</code></td>
+  <td><code>– (Signal.map)</code></td>
+  <td><code>– (map)</code></td>
+  <td><code>constant</code></td>
+  <td><code>mapTo</code></td>
+  <td><code>mapTo</code></td>
 </tr>
 <tr>
-  <td><code>Time.delay</code></td><td><code>delay</code></td><td><code>delay</code></td><td><code>delay</code></td>
+  <td><code>Time.delay</code></td>
+  <td><code>delay</code></td>
+  <td><code>delay</code></td>
+  <td><code>delay</code></td>
+  <td><code>combine(delay(500))</code></td>
 </tr>
 <tr>
-  <td><code>Time.timestamp</code></td><td><code>– (map)</code></td><td><code>timestamp</code></td><td><code>timestamp</code></td>
+  <td><code>Time.timestamp</code></td>
+  <td><code>– (map)</code></td>
+  <td><code>timestamp</code></td>
+  <td><code>timestamp</code></td>
+  <td><code>– (map)</code></td>
 </tr>
 </table>
 
@@ -78,25 +98,52 @@ Modify events * to *.
 
 <table>
 <tr>
-  <th>Elm</th><th>MostJS</th><th>RxJS</th>
+  <th>Elm</th>
+  <th>MostJS</th>
+  <th>RxJS</th>
+  <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.foldp</code></td><td><code>scan</code></td><td><code>scan</code></td>
+  <td><code>Signal.foldp</code></td>
+  <td><code>scan</code></td>
+  <td><code>scan</code></td>
+  <td><code>fold</code></td>
 </tr>
 <tr>
-  <td><code>– (Signal.filterMap)</code></td><td><code>chain / flatMap</code></td><td><code>flatMap</code></td>
+  <td><code>– (Signal.filterMap)</code></td>
+  <td><code>chain / flatMap</code></td>
+  <td><code>flatMap</code></td>
+  <td><code>map + flattenConcurrently</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>concatMap</code></td><td><code>concatMap</code></td></td>
+  <td><code>?</code></td>
+  <td><code>map + switch</code></td>
+  <td><code>switchMap / flatMapLatest</code></td>
+  <td><code>map + flatten</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>join</code></td><td><code>mergeAll</code></td></td>
+  <td>?</td>
+  <td><code>concatMap</code></td>
+  <td><code>concatMap</code></td>
+  <td><code>flattenSequentially</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>loop</code></td><td><code>scan + map</code></td></td>
+  <td>?</td>
+  <td><code>join</code></td>
+  <td><code>mergeAll</code></td>
+  <td><code>flatten</code></td>
 </tr>
 <tr>
-  <td>?</td><td><code>– (<a href="bufferWithCount.md">custom</a>)</code></td><td><code>bufferWithCount</code></td></td>
+  <td><code>foldp + map</code></td>
+  <td><code>loop</code></td>
+  <td><code>scan + map</code></td>
+  <td><code>scan + map</code></td>
+</tr>
+<tr>
+  <td>?</td>
+  <td><code>– (<a href="bufferWithCount.md">custom</a>)</code></td>
+  <td><code>bufferWithCount</code></td>
+  <td>?</td>
 </tr>
 </table>
 
