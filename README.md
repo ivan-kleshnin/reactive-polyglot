@@ -238,25 +238,25 @@ Skip events by predicate or signal.
   <td>?</td>
   <td><code>skipWhile</code></td>
   <td><code>skipWhile</code></td>
-  <td>?</td>
+  <td><code>fold + filter + map</code></td>
 </tr>
 <tr>
   <td>?</td>
   <td><code>takeWhile</code></td>
   <td><code>takeWhile</code></td>
-  <td>?</td>
+  <td><code>filter + endWhen</code></td>
 </tr>
 <tr>
   <td>?</td>
   <td><code>since / skipUntil</code></td>
   <td><code>skipUntil</code></td>
-  <td>?</td>
+  <td><code>fold + filter + map</code></td>
 </tr>
 <tr>
   <td>?</td>
   <td><code>until / takeUntil</code></td>
   <td><code>takeUntil</code></td>
-  <td>?</td>
+  <td><code>filter + endWhen</code></td>
 </tr>
 <tr>
   <td>?</td>
