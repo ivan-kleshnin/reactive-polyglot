@@ -21,7 +21,7 @@ let history = function (n) {
   let put = appendSliding(n)
   return this.scan((stateHistory, newState) => {
     return put(newState, stateHistory)
-  }, repeat(null, n - 1))
+  }, repeat(null, n))
 }
 
 // Usage
