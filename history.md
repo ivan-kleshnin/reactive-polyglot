@@ -23,4 +23,8 @@ let history = function (n) {
     return put(newState, stateHistory)
   }, repeat(null, n - 1))
 }
+
+// Usage
+statefulStream
+  ::history(3)
 ```
