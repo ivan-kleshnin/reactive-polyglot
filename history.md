@@ -1,29 +1,26 @@
 ### Track history for N events
 
+#### RxJS
+
 ```js
-import Most from "most";
-import {add, append, curry, repeat} from "ramda";
+let {append, drop, repeat} = require("ramda")
 
-// Number -> Stream a -> Stream [a]
-let history = curry((n, s$) => {
-  return s$
-    .scan((states, nextState) => {
-      return takeLast(n, append(nextState, states));
-    }, repeat(n, null))
-    .filter(x => x.length);
-});
+let appendSliding = curry((n, x, xs) => {
+  let ys = append(x, xs)
+  if (ys.length > n) {
+    return drop(ys.length - n, ys)
+  } else {
+    return ys
+  }
+})
 
-let most = Most
-  .periodic(100, 1)
-  .scan(add, 0); // 0--1--2--...
-
-history(3, most) // [0]--[0, 1]--[0, 1, 2]--[1, 2, 3]--[2, 3, 4]--...
-  .map(x => {
-    return {
-      olderState: x.slice(-3, x.length - 2, x)[0], // u--u--0--...
-      prevState: x.slice(-2, x.length - 1, x)[0],  // u--0--1--...
-      currState: x.slice(-1, x.length, x)[0],      // 0--1--2--...
-    };
-  })
-  .observe(console.log);
+let history = function (n) {
+  if (n <= 0) {
+    throw Error("n must be an unsigned integer, got "+ String(n))
+  }
+  let put = appendSliding(n)
+  return this.scan((stateHistory, newState) => {
+    return put(newState, stateHistory)
+  }, repeat(null, n - 1))
+}
 ```
