@@ -165,7 +165,7 @@ Modify events * to *.
   <td>?</td>
   <td><code>concatMap</code></td>
   <td><code>concatMap</code></td>
-  <td><code>flattenSequentially</code></td>
+  <td><code>map + flattenSequentially</code></td>
 </tr>
 <tr>
   <td>?</td>
@@ -177,7 +177,7 @@ Modify events * to *.
   <td><code>foldp + map</code></td>
   <td><code>loop</code></td>
   <td><code>scan + map</code></td>
-  <td><code>scan + map</code></td>
+  <td><code>fold + map</code></td>
 </tr>
 <tr>
   <td>?</td>
@@ -293,7 +293,7 @@ Combine multiple streams into single.
   <td><code>Signal.sampleOn</code></td>
   <td><code>sample</code></td>
   <td><code>withLatestFrom</code></td>
-  <td>?</td>
+  <td><code>map + map + flatten</code></td>
 </tr>
 <tr>
   <td><code>Signal.sampleOn + Time.every</code></td>
@@ -311,7 +311,7 @@ Combine multiple streams into single.
   <td>?</td>
   <td><code>concat</code></td>
   <td><code>concat</code></td>
-  <td>?</td>
+  <td><code>concat</code></td>
 </tr>
 <tr>
   <td>?</td>
@@ -412,6 +412,12 @@ Operators which target **end** event somehow.
 2. Separate packages for [subject-like](https://github.com/TylorS/most-subject) and [property-like](https://github.com/mostjs/hold https://github.com/mostjs/hold) primitives.
 3. Provides API to handle errors.
 4. Provides API to handle ending.
+
+#### XStream
+
+1. One primitive: `Stream`.
+2. Always multicast. A Stream is like an RxJS Subject.
+3. Streams end on error.
 
 #### Common
 
