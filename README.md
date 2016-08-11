@@ -19,70 +19,60 @@ Create stream from non-stream values.
 
 <table>
 <tr>
-  <th>Elm</th>
   <th>KefirJS</th>
   <th>MostJS</th>
   <th>RxJS</th>
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.constant</code></td>
   <td><code>constant</code></td>
   <td><code>of / just</code></td>
   <td><code>just</code></td>
   <td><code>of</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>– (sequentially)</code></td>
   <td><code>– (from)</code></td>
   <td><code>of</code></td>
   <td><code>of</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>– (sequentially)</code></td>
   <td><code>from</code></td>
   <td><code>from</code></td>
   <td>?</td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>fromEvents</code></td>
   <td><code>fromEvent</code></td>
   <td><code>fromEvent</code></td>
   <td><code>fromEvent</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>fromPromise</code></td>
   <td><code>fromPromise</code></td>
   <td><code>fromPromise</code></td>
   <td><code>fromPromise</code></td>
 </tr>
 <tr>
-  <td><code>Time.every</code></td>
   <td><code>interval</code></td>
   <td><code>periodic</code></td>
   <td><code>interval + map</code></td>
   <td><code>periodic</code></td>
 </tr>
 <tr>
-  <td><code>–</code></td>
   <td><code>repeat</code></td>
   <td><code>of + R.range</code></td>
   <td><code>repeat</code></td>
   <td><code>of + R.range</code></td>
 </tr>
 <tr>
-  <td><code>–</code></td>
   <td><code>?</code></td>
   <td><code>iterate</code></td>
   <td><code>generate</code></td>
   <td>?</td>
 </tr>
 <tr>
-  <td><code>–</code></td>
   <td><code>?</code></td>
   <td><code>generate</code></td>
   <td><code>generate</code></td>
@@ -96,35 +86,30 @@ Modify events one to one.
 
 <table>
 <tr>
-  <th>Elm</th>
   <th>KefirJS</th>
   <th>MostJS</th>
   <th>RxJS</th>
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.map</code></td>
   <td><code>map</code></td>
   <td><code>map</code></td>
   <td><code>map</code></td>
   <td><code>map</code></td>
 </tr>
 <tr>
-  <td><code>– (Signal.map)</code></td>
   <td><code>– (map)</code></td>
   <td><code>constant</code></td>
   <td><code>mapTo</code></td>
   <td><code>mapTo</code></td>
 </tr>
 <tr>
-  <td><code>Time.delay</code></td>
   <td><code>delay</code></td>
   <td><code>delay</code></td>
   <td><code>delay</code></td>
   <td><code>combine(delay(500))</code></td>
 </tr>
 <tr>
-  <td><code>Time.timestamp</code></td>
   <td><code>– (map)</code></td>
   <td><code>timestamp</code></td>
   <td><code>timestamp</code></td>
@@ -138,49 +123,41 @@ Modify events * to *.
 
 <table>
 <tr>
-  <th>Elm</th>
   <th>MostJS</th>
   <th>RxJS</th>
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.foldp</code></td>
   <td><code>scan</code></td>
   <td><code>scan</code></td>
   <td><code>fold</code></td>
 </tr>
 <tr>
-  <td><code>– (Signal.filterMap)</code></td>
   <td><code>chain / flatMap</code></td>
   <td><code>flatMap</code></td>
   <td><code>map + flattenConcurrently</code></td>
 </tr>
 <tr>
-  <td><code>?</code></td>
   <td><code>map + switch</code></td>
   <td><code>switchMap / flatMapLatest</code></td>
   <td><code>map + flatten</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>concatMap</code></td>
   <td><code>concatMap</code></td>
   <td><code>map + flattenSequentially</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>join</code></td>
   <td><code>mergeAll</code></td>
   <td><code>flatten</code></td>
 </tr>
 <tr>
-  <td><code>foldp + map</code></td>
   <td><code>loop</code></td>
   <td><code>scan + map</code></td>
   <td><code>fold + map</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>– (<a href="bufferWithCount.md">custom</a>)</code></td>
   <td><code>bufferWithCount</code></td>
   <td>?</td>
@@ -193,73 +170,61 @@ Skip events by predicate or signal.
 
 <table>
 <tr>
-  <th>Elm</th>
   <th>MostJS</th>
   <th>RxJS</th>
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.filter</code></td>
   <td><code>filter</code></td>
   <td><code>filter</code></td>
   <td><code>filter</code></td>
 </tr>
 <tr>
-  <td><code>Signal.dropRepeats</code></td>
   <td><code>skipRepeats</code></td>
   <td><code>distinctUntilChanged</code></td>
   <td><code>dropRepeats</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>skipRepeatsWith</code></td>
   <td><code>– (scan)</code></td>
   <td><code>dropRepeats</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>skip</code></td>
   <td><code>skip</code></td>
   <td><code>drop</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>take</code></td>
   <td><code>take</code></td>
   <td><code>take</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>slice</code></td>
   <td><code>skip + take</code></td>
   <td><code>drop + take</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>skipWhile</code></td>
   <td><code>skipWhile</code></td>
   <td><code>fold + filter + map</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>takeWhile</code></td>
   <td><code>takeWhile</code></td>
   <td><code>filter + endWhen</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>since / skipUntil</code></td>
   <td><code>skipUntil</code></td>
   <td><code>fold + filter + map</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>until / takeUntil</code></td>
   <td><code>takeUntil</code></td>
   <td><code>filter + endWhen</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>during</code></td>
   <td><code>window + take(1)</code></td>
   <td>?</td>
@@ -272,49 +237,41 @@ Combine multiple streams into single.
 
 <table>
 <tr>
-  <th>Elm</th>
   <th>MostJS</th>
   <th>RxJS</th>
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>Signal.merge / Signal.mergeMany</code></td>
   <td><code>merge</code></td>
   <td><code>merge</code></td>
   <td><code>merge</code></td>
 </tr>
 <tr>
-  <td><code>Signal.map2 / Signal.map3...</code></td>
   <td><code>combine</code></td>
   <td><code>combineLatest</code></td>
   <td><code>combine</code></td>
 </tr>
 <tr>
-  <td><code>Signal.sampleOn</code></td>
   <td><code>sample</code></td>
   <td><code>withLatestFrom</code></td>
   <td><code>map + map + flatten</code></td>
 </tr>
 <tr>
-  <td><code>Signal.sampleOn + Time.every</code></td>
   <td><code>sampleWith</code></td>
   <td><code>sample</code></td>
   <td>?</td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>zip</code></td>
   <td><code>zip</code></td>
   <td>?</td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>concat</code></td>
   <td><code>concat</code></td>
   <td><code>concat</code></td>
 </tr>
 <tr>
-  <td>?</td>
   <td><code>ap</code></td>
   <td><code>combineLatest</code></td>
   <td>?</td>
