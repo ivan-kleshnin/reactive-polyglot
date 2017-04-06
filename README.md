@@ -254,7 +254,7 @@ Combine multiple streams into single.
 <tr>
   <td><code>sample</code></td>
   <td><code>withLatestFrom</code></td>
-  <td><code>map + map + flatten</code></td>
+  <td><code>sampleCombine</code></td>
 </tr>
 <tr>
   <td><code>sampleWith</code></td>
