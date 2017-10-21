@@ -2,16 +2,197 @@
 
 **`R.`** [(Ramda)](http://ramdajs.com/0.19.1/index.html) stands for standard functional toolkit.
 
-## Operators
+### Comparison notes
 
-Current ordering is subjective: from most common operators to less common.<br/>
-Operator counterparts are not expected to be fully equivalent.<br/>
-"Kinda the same" is the current definition.
+Operator counterparts aren't and can't be fully equivalent.<br/>
+"Kinda the same" – is the current definition.
 
-Presence of operator is not "good" as well as abscence is not "bad".<br/> 
-Every decision has it's own benefits and drawbacks.
-Remember, that we're trying to make analogies over systems which were be designed
-with different goals / philosophies in mind.
+The following projects, were created with different goals and tradeoffs in mind, so every comparison
+and analogy is subjective and can be argued. The presence of some operator is not necessary good, as
+well as the abscence is not necessary bad.
+
+Note, that primitives differ for each library. In descriptions, we broadly refer to all the "observable
+primitives" as **streams***, though, technically speaking, some of them are rather stream-like entities.
+
+To find something, search for a term you know.
+
+## API
+
+### Create
+
+#### Create a stream from a single value
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>constant</code></td>
+    <td><code>of / just</code></td>
+    <td><code>of / just</code></td>
+    <td><code>of</code></td>
+  </tr>
+</table>
+
+#### Create a stream from an array
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>sequentially</code></td>
+    <td><code>from</code></td>
+    <td><code>from / of</code></td>
+    <td><code>from / fromArray</code></td>
+  </tr>
+</table>
+
+#### Create a stream from a promise
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>fromPromise</code></td>
+    <td><code>fromPromise</code></td>
+    <td><code>fromPromise</code></td>
+    <td><code>fromPromise</code></td>
+  </tr>
+</table>
+
+#### Create a stream from an event
+
+<table>
+<tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+<tr>
+  <td><code>fromEvents</code></td>
+  <td><code>fromEvent</code></td>
+  <td><code>fromEvent</code></td>
+  <td><code>fromEvent</code></td>
+</tr>
+</table>
+
+#### Create a stream from a callback
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>fromCallback / fromNodeCallback / fromPoll</code></td>
+    <td><code>? (make a promise first)</code></td>
+    <td><code>bindCallback</code></td>
+    <td><code>? (make a promise first)</code></td>
+  </tr>
+</table>
+
+#### Prepend a stream with a value
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>–</code></td>
+    <td><code>startWith</code></td>
+    <td><code>startWith</code></td>
+    <td><code>startWith</code></td>
+  </tr>
+</table>
+
+### Transformations
+
+#### Map values to another values
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>map / map(R.always(v))</code></td>
+    <td><code>map / constant</code></td>
+    <td><code>map / mapTo</code></td>
+    <td><code>map / mapTo</code></td>
+  </tr>
+<table>
+
+#### Filter values by a predicate
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>filter</code></td>
+    <td><code>filter</code></td>
+    <td><code>filter</code></td>
+    <td><code>filter</code></td>
+  </tr>
+</table>
+
+#### Skip N initial values
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>skip</code></td>
+    <td><code>skip</code></td>
+    <td><code>skip</code></td>
+    <td><code>drop</code></td>
+  </tr>
+</table>
+
+#### Take N initial values
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>take</code></td>
+    <td><code>take</code></td>
+    <td><code>take</code></td>
+    <td><code>take</code></td>
+  </tr>
+</table>
+
+#### Scan values (reduce, sending intermediate steps)
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>scan</code></td>
+    <td><code>scan</code></td>
+    <td><code>scan</code></td>
+    <td><code>fold</code></td>
+  </tr>
+</table>
+
+### Combinators
+
+#### Merge multiple streams together
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>merge</code></td>
+    <td><code>merge</code></td>
+    <td><code>merge</code></td>
+    <td><code>merge</code></td>
+  </tr>
+</table>
+
+#### Combine multiple streams together
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>combine</code></td>
+    <td><code>combine</code></td>
+    <td><code>combineLatest</code></td>
+    <td><code>combine</code></td>
+  </tr>
+</table>
+
+#### Sample a stream by another stream
+
+<table>
+  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
+  <tr>
+    <td><code>sampledBy</code></td>
+    <td><code>sample / sampleWith</code></td>
+    <td><code>sample / withLatestFrom</code></td>
+    <td><code>sampleCombine</code></td>
+  </tr>
+</table>
+
+---
 
 ### Create
 
@@ -23,36 +204,6 @@ Create stream from non-stream values.
   <th>MostJS</th>
   <th>RxJS</th>
   <th>XStream</th>
-</tr>
-<tr>
-  <td><code>constant</code></td>
-  <td><code>of / just</code></td>
-  <td><code>just</code></td>
-  <td><code>of</code></td>
-</tr>
-<tr>
-  <td><code>– (sequentially)</code></td>
-  <td><code>– (from)</code></td>
-  <td><code>of</code></td>
-  <td><code>of</code></td>
-</tr>
-<tr>
-  <td><code>– (sequentially)</code></td>
-  <td><code>from</code></td>
-  <td><code>from</code></td>
-  <td>?</td>
-</tr>
-<tr>
-  <td><code>fromEvents</code></td>
-  <td><code>fromEvent</code></td>
-  <td><code>fromEvent</code></td>
-  <td><code>fromEvent</code></td>
-</tr>
-<tr>
-  <td><code>fromPromise</code></td>
-  <td><code>fromPromise</code></td>
-  <td><code>fromPromise</code></td>
-  <td><code>fromPromise</code></td>
 </tr>
 <tr>
   <td><code>interval</code></td>
@@ -92,18 +243,6 @@ Modify events one to one.
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>map</code></td>
-  <td><code>map</code></td>
-  <td><code>map</code></td>
-  <td><code>map</code></td>
-</tr>
-<tr>
-  <td><code>– (map)</code></td>
-  <td><code>constant</code></td>
-  <td><code>mapTo</code></td>
-  <td><code>mapTo</code></td>
-</tr>
-<tr>
   <td><code>delay</code></td>
   <td><code>delay</code></td>
   <td><code>delay</code></td>
@@ -126,11 +265,6 @@ Modify events * to *.
   <th>MostJS</th>
   <th>RxJS</th>
   <th>XStream</th>
-</tr>
-<tr>
-  <td><code>scan</code></td>
-  <td><code>scan</code></td>
-  <td><code>fold</code></td>
 </tr>
 <tr>
   <td><code>chain / flatMap</code></td>
@@ -175,11 +309,6 @@ Skip events by predicate or signal.
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>filter</code></td>
-  <td><code>filter</code></td>
-  <td><code>filter</code></td>
-</tr>
-<tr>
   <td><code>skipRepeats</code></td>
   <td><code>distinctUntilChanged</code></td>
   <td><code>dropRepeats</code></td>
@@ -188,16 +317,6 @@ Skip events by predicate or signal.
   <td><code>skipRepeatsWith</code></td>
   <td><code>– (scan)</code></td>
   <td><code>dropRepeats</code></td>
-</tr>
-<tr>
-  <td><code>skip</code></td>
-  <td><code>skip</code></td>
-  <td><code>drop</code></td>
-</tr>
-<tr>
-  <td><code>take</code></td>
-  <td><code>take</code></td>
-  <td><code>take</code></td>
 </tr>
 <tr>
   <td><code>slice</code></td>
@@ -242,26 +361,6 @@ Combine multiple streams into single.
   <th>XStream</th>
 </tr>
 <tr>
-  <td><code>merge</code></td>
-  <td><code>merge</code></td>
-  <td><code>merge</code></td>
-</tr>
-<tr>
-  <td><code>combine</code></td>
-  <td><code>combineLatest</code></td>
-  <td><code>combine</code></td>
-</tr>
-<tr>
-  <td><code>sample</code></td>
-  <td><code>withLatestFrom</code></td>
-  <td><code>sampleCombine</code></td>
-</tr>
-<tr>
-  <td><code>sampleWith</code></td>
-  <td><code>sample</code></td>
-  <td>?</td>
-</tr>
-<tr>
   <td><code>zip</code></td>
   <td><code>zip</code></td>
   <td>?</td>
@@ -278,7 +377,7 @@ Combine multiple streams into single.
 </tr>
 </table>
 
-### Side effects 
+### Side effects
 
 Produce side effect for every event.
 
@@ -351,7 +450,7 @@ Operators which target **end** event somehow.
 
 #### RxJS
 
-1. Three primitives: `Observer`, `Observable`, `Subject`. 
+1. Three primitives: `Observer`, `Observable`, `Subject`.
 2. Observables end on error.
 3. Provides API to handle errors.
 3. Does not provide API to handle ending.
@@ -392,7 +491,7 @@ Most.periodic(100, 1)
 
 ### Found docs / API quirks
 
-#### MostJS 
+#### MostJS
 
 `startWith` vs `sampleWith` vs `continueWith` + `recoverWith` vs `skipRepeatsWith`<br/>
 (val vs none vs func vs stream)
