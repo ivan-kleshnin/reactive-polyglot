@@ -457,21 +457,21 @@ Operators which target **end** event somehow.
 
 #### KefirJS
 
-1. Two primitives: `Stream` and `Property`. Properties have "current value" notion.
+1. Two primitives: `Stream` and `Property` (like XStream).
 2. Observables does not end on error (by default).
 3. Provides API to handle errors.
 4. Provides API to handle ending.
 
 #### MostJS
 
-1. One primitive: `Stream`.
+1. One primitive: `Stream` (+ community-driven).
 2. Separate packages for [subject-like](https://github.com/TylorS/most-subject) and [property-like](https://github.com/mostjs/hold) primitives.
 3. Provides API to handle errors.
 4. Provides API to handle ending.
 
 #### XStream
 
-1. One primitive: `Stream`.
+1. Two primitives: `Stream` and `MemoryStream` (like KefirJS).
 2. Always multicast. A Stream is like an RxJS Subject.
 3. Streams end on error.
 
