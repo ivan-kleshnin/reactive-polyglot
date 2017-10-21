@@ -75,7 +75,7 @@ To find something, search for a term you know.
   <tr>
     <td><code>fromCallback / fromNodeCallback / fromPoll</code></td>
     <td><code>? (make a promise first)</code></td>
-    <td><code>bindCallback</code></td>
+    <td><code>bindCallback / bindNodeCallback</code></td>
     <td><code>? (make a promise first)</code></td>
   </tr>
 </table>
