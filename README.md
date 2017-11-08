@@ -22,75 +22,45 @@ To find something, search for a term you know.
 
 #### Create a stream from a single value
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>constant</code></td>
-    <td><code>of / just</code></td>
-    <td><code>of / just</code></td>
-    <td><code>of</code></td>
-  </tr>
-</table>
+* KefirJS: `constant`
+* MostJS: `of / just`
+* RxJS: `of / just` 
+* XStream: `of`
 
 #### Create a stream from an array
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>sequentially</code></td>
-    <td><code>from</code></td>
-    <td><code>from / of</code></td>
-    <td><code>from / fromArray</code></td>
-  </tr>
-</table>
+* KefirJS: `sequentially`
+* MostJS: `from`
+* RxJS: `from / of` 
+* XStream: `from / fromArray`
 
 #### Create a stream from a promise
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>fromPromise</code></td>
-    <td><code>fromPromise</code></td>
-    <td><code>fromPromise</code></td>
-    <td><code>fromPromise</code></td>
-  </tr>
-</table>
+* KefirJS: `fromPromise`
+* MostJS: `fromPromise`
+* RxJS: `fromPromise` 
+* XStream: `fromPromise`
 
 #### Create a stream from an event
 
-<table>
-<tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-<tr>
-  <td><code>fromEvents</code></td>
-  <td><code>fromEvent</code></td>
-  <td><code>fromEvent</code></td>
-  <td><code>fromEvent</code></td>
-</tr>
-</table>
+* KefirJS: `fromEvents`
+* MostJS: `fromEvent`
+* RxJS: `fromEvent` 
+* XStream: `fromEvent`
 
 #### Create a stream from a callback
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>fromCallback / fromNodeCallback / fromPoll</code></td>
-    <td><code>? (make a promise first)</code></td>
-    <td><code>bindCallback / bindNodeCallback</code></td>
-    <td><code>? (make a promise first)</code></td>
-  </tr>
-</table>
+* KefirJS: `fromCallback / fromNodeCallback / fromPoll`
+* MostJS: `? (make a promise first)`
+* RxJS: `bindCallback / bindNodeCallback` 
+* XStream: `? (make a promise first)`
 
 #### Prepend a stream with a value
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>merge + constant</code></td>
-    <td><code>startWith</code></td>
-    <td><code>startWith</code></td>
-    <td><code>startWith</code></td>
-  </tr>
-</table>
+* KefirJS: `merge + constant`
+* MostJS: `startWith`
+* RxJS: `startWith` 
+* XStream: `startWith`
 
 ### Transformations
 
