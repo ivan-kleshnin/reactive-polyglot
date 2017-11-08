@@ -85,7 +85,7 @@ To find something, search for a term you know.
 <table>
   <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
   <tr>
-    <td><code>–</code></td>
+    <td><code>merge + constant</code></td>
     <td><code>startWith</code></td>
     <td><code>startWith</code></td>
     <td><code>startWith</code></td>
