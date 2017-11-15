@@ -23,16 +23,16 @@ To find something, search for a term you know.
 #### Create a stream from a single value
 
 * KefirJS: `constant`
-* MostJS: `of / just`
-* RxJS: `of / just` 
+* MostJS: `of`, `just`
+* RxJS: `of`, `just` 
 * XStream: `of`
 
 #### Create a stream from an array
 
 * KefirJS: `sequentially`
 * MostJS: `from`
-* RxJS: `from / of` 
-* XStream: `from / fromArray`
+* RxJS: `from`, `of` 
+* XStream: `from`, `fromArray`
 
 #### Create a stream from a promise
 
@@ -50,9 +50,9 @@ To find something, search for a term you know.
 
 #### Create a stream from a callback
 
-* KefirJS: `fromCallback / fromNodeCallback / fromPoll`
-* MostJS: `? (make a promise first)`
-* RxJS: `bindCallback / bindNodeCallback` 
+* KefirJS: `stream`, `fromCallback`, `fromNodeCallback`, `fromPoll`
+* MostJS: `new Stream`
+* RxJS: `new Observable`, `bindCallback`, `bindNodeCallback` 
 * XStream: `? (make a promise first)`
 
 #### Prepend a stream with a value
@@ -62,93 +62,58 @@ To find something, search for a term you know.
 * RxJS: `startWith` 
 * XStream: `startWith`
 
-### Transformations
+### Transform (data events)
 
-#### Map values to another values
+#### Map value one-to-one
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>map / map(R.always(v))</code></td>
-    <td><code>map / constant</code></td>
-    <td><code>map / mapTo</code></td>
-    <td><code>map / mapTo</code></td>
-  </tr>
-<table>
+* KefirJS: `map`
+* MostJS: `map`, `constant`
+* RxJS: `map`, `mapTo` 
+* XStream: `map`
 
-#### Filter values by a predicate
+#### Filter value by a predicate
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>filter</code></td>
-    <td><code>filter</code></td>
-    <td><code>filter</code></td>
-    <td><code>filter</code></td>
-  </tr>
-</table>
+* KefirJS: `filter`
+* MostJS: `filter`
+* RxJS: `filter`
+* XStream: `filter`
 
 #### Skip N initial values
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>skip</code></td>
-    <td><code>skip</code></td>
-    <td><code>skip</code></td>
-    <td><code>drop</code></td>
-  </tr>
-</table>
+* KefirJS: `skip`
+* MostJS: `skip`
+* RxJS: `skip`
+* XStream: `drop`
 
 #### Take N initial values
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>take</code></td>
-    <td><code>take</code></td>
-    <td><code>take</code></td>
-    <td><code>take</code></td>
-  </tr>
-</table>
+* KefirJS: `take`
+* MostJS: `take`
+* RxJS: `take`
+* XStream: `take`
 
-#### Scan values (reduce, sending intermediate steps)
+#### Make a value from an accumulator and a next value
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>scan</code></td>
-    <td><code>scan</code></td>
-    <td><code>scan</code></td>
-    <td><code>fold</code></td>
-  </tr>
-</table>
+* KefirJS: `scan`
+* MostJS: `scan`
+* RxJS: `scan`
+* XStream: `fold`
 
-### Combinators
+### Combine
 
 #### Merge multiple streams together
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>merge</code></td>
-    <td><code>merge</code></td>
-    <td><code>merge</code></td>
-    <td><code>merge</code></td>
-  </tr>
-</table>
+* KefirJS: `merge`
+* MostJS: `merge`
+* RxJS: `merge`
+* XStream: `merge`
 
 #### Combine multiple streams together
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>combine</code></td>
-    <td><code>combine</code></td>
-    <td><code>combineLatest</code></td>
-    <td><code>combine</code></td>
-  </tr>
-</table>
+* KefirJS: `combine`
+* MostJS: `combine`
+* RxJS: `combineLatest`
+* XStream: `combine`
 
 #### Sample a stream by another stream
 
