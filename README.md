@@ -108,6 +108,8 @@ To find something, search for a term you know.
 * RxJS: `merge`
 * XStream: `merge`
 
+Pay attention that Kefir's `merge` accepts arrays while others are variadic.
+
 #### Combine multiple streams together
 
 * KefirJS: `combine`
