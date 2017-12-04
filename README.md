@@ -126,15 +126,10 @@ Pay attention that Kefir's `merge` accepts arrays while others are variadic.
 
 #### Sample a stream by another stream
 
-<table>
-  <tr><th>KefirJS</th><th>MostJS</th><th>RxJS</th><th>XStream</th></tr>
-  <tr>
-    <td><code>sampledBy</code></td>
-    <td><code>sample / sampleWith</code></td>
-    <td><code>sample / withLatestFrom</code></td>
-    <td><code>sampleCombine</code></td>
-  </tr>
-</table>
+* KefirJS: `combine`, `sampledBy`
+* MostJS: `sample`, `sampleWith`
+* RxJS: `sample`, `withLatestFrom`
+* XStream: `sampleCombine`
 
 ---
 
