@@ -131,6 +131,13 @@ Pay attention that Kefir's `merge` accepts arrays while others are variadic.
 * RxJS: `sample`, `withLatestFrom`
 * XStream: `sampleCombine`
 
+#### Chain streams sequentially
+
+* KefirJS: `flatMapConcat`
+* MostJS: `concatMap`
+* RxJS: `concatMap`
+* XStream: `map + flattenSequentially`
+
 ---
 
 ### Create
@@ -214,11 +221,6 @@ Modify events * to *.
   <td><code>map + switch</code></td>
   <td><code>switchMap / flatMapLatest</code></td>
   <td><code>map + flatten</code></td>
-</tr>
-<tr>
-  <td><code>concatMap</code></td>
-  <td><code>concatMap</code></td>
-  <td><code>map + flattenSequentially</code></td>
 </tr>
 <tr>
   <td><code>join</code></td>
