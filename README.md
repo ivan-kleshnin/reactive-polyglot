@@ -20,6 +20,13 @@ To find something, search for a term you know.
 
 ### Create
 
+#### Create an empty stream
+
+* KefirJS: `never`
+* MostJS: `empty`
+* RxJS: `of`
+* XStream: `empty`
+
 #### Create a stream from a single value
 
 * KefirJS: `constant`
