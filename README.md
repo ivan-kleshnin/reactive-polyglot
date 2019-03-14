@@ -66,7 +66,7 @@ To find something, search for a term you know.
 
 * KefirJS: [`merge`](http://kefirjs.github.io/kefir/#merge) `+` [`constant`](http://kefirjs.github.io/kefir/#constant)
 * MostJS: `startWith`
-* RxJS: `startWith`
+* RxJS: [`startWith`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/startwith.md)
 * XStream: `startWith`
 
 ### Transform (data events)
@@ -75,35 +75,35 @@ To find something, search for a term you know.
 
 * KefirJS: [`map`](http://kefirjs.github.io/kefir/#map)
 * MostJS: `map`, `constant`
-* RxJS: `map`, `mapTo`
+* RxJS: [`map`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/select.md), `mapTo`
 * XStream: `map`
 
 #### Filter value by a predicate
 
 * KefirJS: [`filter`](http://kefirjs.github.io/kefir/#filter)
 * MostJS: `filter`
-* RxJS: `filter`
+* RxJS: [`filter`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/where.md)
 * XStream: `filter`
 
 #### Skip N initial values
 
 * KefirJS: [`skip`](http://kefirjs.github.io/kefir/#skip)
 * MostJS: `skip`
-* RxJS: `skip`
+* RxJS: [`skip`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/skip.md)
 * XStream: `drop`
 
 #### Take N initial values
 
 * KefirJS: [`take`](http://kefirjs.github.io/kefir/#take)
 * MostJS: `take`
-* RxJS: `take`
+* RxJS: [`take`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/take.md)
 * XStream: `take`
 
 #### Make a value from an accumulator and a next value
 
 * KefirJS: [`scan`](http://kefirjs.github.io/kefir/#scan)
 * MostJS: `scan`
-* RxJS: `scan`
+* RxJS: [`scan`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/scan.md)
 * XStream: `fold`
 
 ### Combine
@@ -112,7 +112,7 @@ To find something, search for a term you know.
 
 * KefirJS: [`merge`](http://kefirjs.github.io/kefir/#merge)
 * MostJS: `merge`
-* RxJS: `merge`
+* RxJS: [`merge`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/merge.md)
 * XStream: `merge`
 
 Pay attention that Kefir's `merge` accepts arrays while others are variadic.
@@ -121,21 +121,21 @@ Pay attention that Kefir's `merge` accepts arrays while others are variadic.
 
 * KefirJS: [`combine`](http://kefirjs.github.io/kefir/#combine)
 * MostJS: `combine`
-* RxJS: `combineLatest`
+* RxJS: [`combineLatest`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/combinelatest.md)
 * XStream: `combine`
 
 #### Sample a stream by another stream
 
 * KefirJS: [`combine`](http://kefirjs.github.io/kefir/#combine), [`sampledBy`](http://kefirjs.github.io/kefir/#obs-sampled-by)
 * MostJS: `sample`, `sampleWith`
-* RxJS: `sample`, `withLatestFrom`
+* RxJS: [`sample`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/sample.md), [`withLatestFrom`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/withlatestfrom.md)
 * XStream: `sampleCombine`
 
 #### Chain streams sequentially
 
 * KefirJS: [`flatMapConcat`](http://kefirjs.github.io/kefir/#flat-map-concat)
-* MostJS: `concatMap`
-* RxJS: `concatMap`
+* MostJS: [`concatMap`](https://github.com/cujojs/most/blob/master/docs/api.md#concatmap)
+* RxJS: [`concatMap`](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/concatmap.md)
 * XStream: `map + flattenSequentially`
 
 ---
